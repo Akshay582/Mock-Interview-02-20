@@ -10,6 +10,7 @@ const result = new mongoose.Schema({
         required: true
     },
     result: {
+        type: String,
         enum: ['pass', 'fail', 'on hold', 'didn"t attempt'],
         default: 'on hold'
     }
