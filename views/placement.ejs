@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement</title>
+</head>
+<body>
+    <% for(interview of interviews) {%>
+        Student Name: 
+        <strong>
+            <%= interview.student_id.student_name %>
+        </strong>
+        <br>
+        Company Name: 
+        <strong>
+            <%= interview.company_id.company_name %>
+        </strong>
+        <br>
+        Interview Date:
+        <strong>
+            <%= interview.date %>
+        </strong>
+        <br>
+        <hr>
+    <% } %>
+</body>
+</html>

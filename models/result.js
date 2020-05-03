@@ -3,11 +3,13 @@ const mongoose = require('mongoose');
 const result = new mongoose.Schema({
     student_id: {
         type: mongoose.Schema.ObjectId,
-        required: true
+        required: true,
+        ref: 'Student'
     },
     company_id: {
         type: mongoose.Schema.ObjectId,
-        required: true
+        required: true,
+        ref: 'Company'
     },
     result: {
         type: String,

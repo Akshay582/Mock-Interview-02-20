@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const expressLayout = require('express-ejs-layouts');
+// const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 const port = 8000;
 
@@ -9,7 +9,7 @@ const db = require('./config/mongoose');
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
-app.use(expressLayout);
+// app.use(expressLayout);
 
 app.set('view engine', 'ejs');
 app.set('views', './views');

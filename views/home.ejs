@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Camp Placement Cell</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+</head>
+<body>
+    <section>
+            <% for(student of students) {%>
+            <div class="card mb-3" style="width: 55rem;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://previews.123rf.com/images/dizanna/dizanna1504/dizanna150400010/38301674-student-word-cloud-education-business-concept.jpg" 
+                    style="height:30rem;width:17rem"
+                    class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title"><%= student.student_name %></h1>
+                      <p class="card-text">The student has done the following courses: 
+                          <% for(course of student.course) {%>
+                            <br>
+                            <strong><%= course.name %></strong>
+                            with score: 
+                            <strong><%= course.score %></strong>
+                          <% } %>
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                          Phone: <br> <strong><%= student.phone %></strong>
+                        </li>
+                      <li class="list-group-item">
+                          email: <br> <strong><%= student.email %></strong>
+                        </li>
+                      <li class="list-group-item">
+                          Status: <br> <strong style="text-transform: uppercase;"><%= student.status %></strong>
+                        </li>
+                      <li class="list-group-item">
+                          College: <br> <strong><%= student.college %></strong>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          <% } %>
+    </section>
+</body>
+</html>
